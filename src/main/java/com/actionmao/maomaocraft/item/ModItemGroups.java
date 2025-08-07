@@ -1,6 +1,7 @@
 package com.actionmao.maomaocraft.item;
 
 import com.actionmao.maomaocraft.MaoMaoCraft;
+import com.actionmao.maomaocraft.block.ModBlocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -31,6 +32,7 @@ public class ModItemGroups {
                         .icon(() -> new ItemStack(ModItems.MAO_CORE))
                         .entries((displayContext, entries) -> {
                             entries.add(ModItems.MAO_CORE);
+                            entries.add(ModBlocks.MAO_CORE_BLOCK);
                         })
                         .build()
         );

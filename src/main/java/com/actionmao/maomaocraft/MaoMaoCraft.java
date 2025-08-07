@@ -1,5 +1,6 @@
 package com.actionmao.maomaocraft;
 
+import com.actionmao.maomaocraft.block.ModBlocks;
 import com.actionmao.maomaocraft.item.ModItemGroups;
 import com.actionmao.maomaocraft.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -24,6 +25,7 @@ public class MaoMaoCraft implements ModInitializer {
 		//加载ModItems类,用于注册物品
 		ModItems.registerModItems();
 		ModItemGroups.registerModItemGroups();
+		ModBlocks.registerModBlocks();
 		LOGGER.info("Hello Fabric world!");
 	}
 }

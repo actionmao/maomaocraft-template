@@ -14,6 +14,15 @@ public class ModItems {
     public static final Item MAO_CORE = registerItems("mao_core", new Item(new Item.Settings()));
 
 
+
+
+
+
+
+
+
+
+    //普通物品注册
     //要想注册一个新的物品,请使用该方法
     public static Item registerItems(String id, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(MaoMaoCraft.MOD_ID, id), item);
