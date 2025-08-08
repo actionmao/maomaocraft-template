@@ -31,8 +31,11 @@ public class ModItemGroups {
                         .displayName(Text.translatable("itemGroup.mao_group"))
                         .icon(() -> new ItemStack(ModItems.MAO_CORE))
                         .entries((displayContext, entries) -> {
+                            //mao_group中会展示的物品
                             entries.add(ModItems.MAO_CORE);
                             entries.add(ModBlocks.MAO_CORE_BLOCK);
+                            entries.add(ModBlocks.RAW_MAO_CORE_BLOCK);
+                            entries.add(ModBlocks.MAO_CORE_ORE);
                         })
                         .build()
         );
