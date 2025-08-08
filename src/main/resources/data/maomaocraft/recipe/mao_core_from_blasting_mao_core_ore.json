@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.05,
+  "group": "mao_core",
+  "ingredient": {
+    "item": "maomaocraft:mao_core_ore"
+  },
+  "result": {
+    "id": "maomaocraft:mao_core"
+  }
+}

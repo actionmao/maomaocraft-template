@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "mao_core",
+  "key": {
+    "#": {
+      "item": "maomaocraft:raw_mao_core"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "maomaocraft:raw_mao_core_block"
+  }
+}

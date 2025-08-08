@@ -49,7 +49,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "maomaocraft:mao_core"
+              "name": "maomaocraft:raw_mao_core"
             }
           ]
         }

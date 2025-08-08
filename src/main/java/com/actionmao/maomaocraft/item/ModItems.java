@@ -12,6 +12,7 @@ import net.minecraft.util.Identifier;
 public class ModItems {
     //物品注册
     public static final Item MAO_CORE = registerItems("mao_core", new Item(new Item.Settings()));
+    public static final Item RAW_MAO_CORE = registerItems("raw_mao_core", new Item(new Item.Settings()));
 
 
     //普通物品注册

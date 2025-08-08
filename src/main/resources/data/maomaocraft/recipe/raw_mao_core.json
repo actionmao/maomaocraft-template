@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "maomaocraft:raw_mao_core_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "maomaocraft:raw_mao_core"
+  }
+}

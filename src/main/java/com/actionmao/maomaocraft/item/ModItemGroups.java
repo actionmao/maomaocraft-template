@@ -33,6 +33,7 @@ public class ModItemGroups {
                         .entries((displayContext, entries) -> {
                             //mao_group中会展示的物品
                             entries.add(ModItems.MAO_CORE);
+                            entries.add(ModItems.RAW_MAO_CORE);
                             entries.add(ModBlocks.MAO_CORE_BLOCK);
                             entries.add(ModBlocks.RAW_MAO_CORE_BLOCK);
                             entries.add(ModBlocks.MAO_CORE_ORE);
