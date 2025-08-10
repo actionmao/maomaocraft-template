@@ -7,7 +7,6 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
-import net.minecraft.item.Items;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.entry.LootPoolEntry;
@@ -30,12 +29,12 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     //成员方法
     @Override
     public void generate() {
-        addDrop(ModBlocks.MAO_CORE_BLOCK);
-        addDrop(ModBlocks.RAW_MAO_CORE_BLOCK);
+        addDrop(ModBlocks.CAT_CORE_BLOCK);
+        addDrop(ModBlocks.RAW_CAT_CORE_BLOCK);
         //针对于一般矿石的掉落物设置写法
         //addDrop(ModBlocks.MAO_CORE_ORE, oreDrops(ModBlocks.MAO_CORE_ORE, ModItems.RAW_MAO_CORE));
         //针对于mao_core_ore的掉落物写法
-        addDrop(ModBlocks.MAO_CORE_ORE, maoCoreOreDrops(ModBlocks.MAO_CORE_ORE));
+        addDrop(ModBlocks.CAT_CORE_ORE, maoCoreOreDrops(ModBlocks.CAT_CORE_ORE));
     }
 
     public LootTable.Builder maoCoreOreDrops(Block drop) {
@@ -44,7 +43,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                 drop,
                 (LootPoolEntry.Builder<?>)this.applyExplosionDecay(
                         drop,
-                        ItemEntry.builder(ModItems.RAW_MAO_CORE)
+                        ItemEntry.builder(ModItems.RAW_CAT_CORE)
                                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 64.0F)))
                                 .apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))
                 )

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "maomaocraft:block/mao_core_block"
-  }
-}

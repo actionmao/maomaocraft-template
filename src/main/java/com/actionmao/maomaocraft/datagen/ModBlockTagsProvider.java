@@ -18,12 +18,12 @@ public class ModBlockTagsProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
-                .add(ModBlocks.MAO_CORE_BLOCK)
-                .add(ModBlocks.MAO_CORE_ORE)
-                .add(ModBlocks.RAW_MAO_CORE_BLOCK);
+                .add(ModBlocks.CAT_CORE_BLOCK)
+                .add(ModBlocks.CAT_CORE_ORE)
+                .add(ModBlocks.RAW_CAT_CORE_BLOCK);
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
-                .add(ModBlocks.RAW_MAO_CORE_BLOCK);
+                .add(ModBlocks.RAW_CAT_CORE_BLOCK);
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.MAO_CORE_ORE);
+                .add(ModBlocks.CAT_CORE_ORE);
     }
 }

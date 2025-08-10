@@ -9,7 +9,6 @@ import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.CampfireCookingRecipe;
@@ -26,7 +25,7 @@ import java.util.concurrent.CompletableFuture;
 public class ModRecipesProvider extends FabricRecipeProvider {
     //放入炉内的物品就是list集合中的每一个参数, 预期的生成物叫做mao_core
     //list集合中的元素就在list.of()的括号中
-    public static final List<ItemConvertible> MAO_CORE = List.of(ModItems.RAW_MAO_CORE, ModBlocks.MAO_CORE_ORE);
+    public static final List<ItemConvertible> MAO_CORE = List.of(ModItems.RAW_CAT_CORE, ModBlocks.CAT_CORE_ORE);
 
     //构造方法
     public ModRecipesProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
@@ -38,17 +37,20 @@ public class ModRecipesProvider extends FabricRecipeProvider {
     @Override
     public void generate(RecipeExporter recipeExporter) {
         //mao_core与mao_core_block可逆合成
-        offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.MISC, ModItems.MAO_CORE,
-                RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAO_CORE_BLOCK);
+        offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.MISC, ModItems.CAT_CORE,
+                RecipeCategory.BUILDING_BLOCKS, ModBlocks.CAT_CORE_BLOCK);
+        //raw_mao_core与raw_mao_core_block可逆合成
+        offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.MISC, ModItems.RAW_CAT_CORE,
+                RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_CAT_CORE_BLOCK);
         //冶炼raw_mao_core
         //ModItems中的mao_core ->生成物
         //1.熔炉
-        offerSmelting(recipeExporter, MAO_CORE, RecipeCategory.MISC, ModItems.MAO_CORE, 0.5F, 20, "mao_core");
+        offerSmelting(recipeExporter, MAO_CORE, RecipeCategory.MISC, ModItems.CAT_CORE, 0.5F, 20, "mao_core");
         //2.高炉
-        offerBlasting(recipeExporter, MAO_CORE, RecipeCategory.MISC, ModItems.MAO_CORE, 0.5F, 10, "mao_core");
+        offerBlasting(recipeExporter, MAO_CORE, RecipeCategory.MISC, ModItems.CAT_CORE, 0.5F, 10, "mao_core");
         //3.营火
         offerFoodCookingRecipe(recipeExporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, CampfireCookingRecipe::new,
-                60, ModItems.RAW_MAO_CORE, ModItems.MAO_CORE, 0.35F);
+                60, ModItems.RAW_CAT_CORE, ModItems.CAT_CORE, 0.35F);
         //有序合成
         //合成方式:3个mud排成一排
         //clay ->生成物
@@ -64,10 +66,10 @@ public class ModRecipesProvider extends FabricRecipeProvider {
         //生成物:mao_core_ore(就是原矿方块)
         //criterion -> 解锁配方条件是:玩家拥有raw_mao_core或stone中的一个
         //offerTo -> 确保解锁配方的json文件生成在data/maomaocraft/recipe下
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAO_CORE_ORE)
-                .input(ModItems.RAW_MAO_CORE)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CAT_CORE_ORE)
+                .input(ModItems.RAW_CAT_CORE)
                 .input(Items.STONE)
-                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.RAW_MAO_CORE))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.RAW_CAT_CORE))
                 .criterion("has_item", RecipeProvider.conditionsFromItem(Items.STONE))
                 .offerTo(recipeExporter, Identifier.of(MaoMaoCraft.MOD_ID, "mao_core_ore"));
     }

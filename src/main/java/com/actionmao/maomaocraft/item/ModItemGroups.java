@@ -14,7 +14,7 @@ import net.minecraft.util.Identifier;
 public class ModItemGroups {
 
     //物品栏组的属性值
-    public static final RegistryKey<ItemGroup> MAO_GROUP = register("mao_group");
+    public static final RegistryKey<ItemGroup> CAT_GROUP = register("mao_group");
 
 
     //要想注册一个新的物品栏,请使用该方法
@@ -26,17 +26,18 @@ public class ModItemGroups {
     public static void registerItemsToItemGroup(){
         Registry.register(
                 Registries.ITEM_GROUP,
-                MAO_GROUP,
+                CAT_GROUP,
                 ItemGroup.create(ItemGroup.Row.TOP, -1)
                         .displayName(Text.translatable("itemGroup.mao_group"))
-                        .icon(() -> new ItemStack(ModItems.MAO_CORE))
+                        .icon(() -> new ItemStack(ModItems.CAT_CORE))
                         .entries((displayContext, entries) -> {
                             //mao_group中会展示的物品
-                            entries.add(ModItems.MAO_CORE);
-                            entries.add(ModItems.RAW_MAO_CORE);
-                            entries.add(ModBlocks.MAO_CORE_BLOCK);
-                            entries.add(ModBlocks.RAW_MAO_CORE_BLOCK);
-                            entries.add(ModBlocks.MAO_CORE_ORE);
+                            entries.add(ModItems.CAT_CORE);
+                            entries.add(ModItems.RAW_CAT_CORE);
+                            entries.add(ModItems.CATNIP_COOKIE_FOOD);
+                            entries.add(ModBlocks.CAT_CORE_BLOCK);
+                            entries.add(ModBlocks.RAW_CAT_CORE_BLOCK);
+                            entries.add(ModBlocks.CAT_CORE_ORE);
                         })
                         .build()
         );

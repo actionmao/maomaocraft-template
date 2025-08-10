@@ -11,8 +11,9 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
     //物品注册
-    public static final Item MAO_CORE = registerItems("mao_core", new Item(new Item.Settings()));
-    public static final Item RAW_MAO_CORE = registerItems("raw_mao_core", new Item(new Item.Settings()));
+    public static final Item CAT_CORE = registerItems("mao_core", new Item(new Item.Settings()));
+    public static final Item RAW_CAT_CORE = registerItems("raw_mao_core", new Item(new Item.Settings()));
+    public static final Item CATNIP_COOKIE_FOOD = registerItems("catnip_cookie_food", new Item(new Item.Settings().food(ModFoodComponents.CATNIP_COOKIE_FOOD)));
 
 
     //普通物品注册
@@ -23,7 +24,7 @@ public class ModItems {
 
     //将物品加入到物品栏中(通过Fabric API)
     public static void addItemToIG(FabricItemGroupEntries fabricItemGroupEntries) {
-        fabricItemGroupEntries.add(MAO_CORE);
+        fabricItemGroupEntries.add(CAT_CORE);
     }
 
     //静态初始化方法

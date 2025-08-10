@@ -11,9 +11,9 @@ import net.minecraft.util.Identifier;
 
 public class ModBlocks {
     //具体方块注册
-    public static final Block MAO_CORE_BLOCK = register("mao_core_block", new Block(AbstractBlock.Settings.create().requiresTool().strength(3.0F, 4.0F)));
-    public static final Block RAW_MAO_CORE_BLOCK = register("raw_mao_core_block", new Block(AbstractBlock.Settings.create().requiresTool().strength(3.0F, 3.0F)));
-    public static final Block MAO_CORE_ORE = register("mao_core_ore", new Block(AbstractBlock.Settings.create().requiresTool().strength(4.5F, 6.0F)));
+    public static final Block CAT_CORE_BLOCK = register("mao_core_block", new Block(AbstractBlock.Settings.create().requiresTool().strength(3.0F, 4.0F)));
+    public static final Block RAW_CAT_CORE_BLOCK = register("raw_mao_core_block", new Block(AbstractBlock.Settings.create().requiresTool().strength(3.0F, 3.0F)));
+    public static final Block CAT_CORE_ORE = register("mao_core_ore", new Block(AbstractBlock.Settings.create().requiresTool().strength(4.5F, 6.0F)));
 
 
     //注册方块方法(BlockItem)

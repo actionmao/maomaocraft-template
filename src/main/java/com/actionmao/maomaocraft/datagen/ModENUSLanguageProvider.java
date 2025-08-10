@@ -19,11 +19,13 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
     //成员方法
     @Override
     public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder) {
-        translationBuilder.add(ModItems.MAO_CORE, "Mao Core");
-        translationBuilder.add(ModItems.RAW_MAO_CORE, "Raw Mao Core");
-        translationBuilder.add(ModBlocks.MAO_CORE_BLOCK, "Mao Core Block");
-        translationBuilder.add(ModBlocks.RAW_MAO_CORE_BLOCK, "Raw Mao Core Block");
-        translationBuilder.add(ModBlocks.MAO_CORE_ORE, "Mao Core Ore");
-        translationBuilder.add(ModItemGroups.MAO_GROUP, "Mao Group");
+        translationBuilder.add(ModItems.CAT_CORE, "Cat Core");
+        translationBuilder.add(ModItems.RAW_CAT_CORE, "Cat Mao Core");
+        translationBuilder.add(ModItems.CATNIP_COOKIE_FOOD, "Catnip Cookie Food");
+
+        translationBuilder.add(ModBlocks.CAT_CORE_BLOCK, "Cat Core Block");
+        translationBuilder.add(ModBlocks.RAW_CAT_CORE_BLOCK, "Raw Cat Core Block");
+        translationBuilder.add(ModBlocks.CAT_CORE_ORE, "Cat Core Ore");
+        translationBuilder.add(ModItemGroups.CAT_GROUP, "Cat Group");
     }
 }
