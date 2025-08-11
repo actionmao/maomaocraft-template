@@ -3,6 +3,7 @@ package com.actionmao.maomaocraft;
 import com.actionmao.maomaocraft.block.ModBlocks;
 import com.actionmao.maomaocraft.item.ModItemGroups;
 import com.actionmao.maomaocraft.item.ModItems;
+import com.actionmao.maomaocraft.mixin.GrassColorsMixin;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.util.Identifier;
@@ -27,6 +28,9 @@ public class MaoMaoCraft implements ModInitializer {
 		ModItems.registerModItems();
 		ModItemGroups.registerModItemGroups();
 		ModBlocks.registerModBlocks();
+
+
+
 		LOGGER.info("Hello Fabric world!");
 	}
 

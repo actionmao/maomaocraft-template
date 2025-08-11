@@ -31,7 +31,7 @@ public class ModModelsProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.CAT_CORE, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_CAT_CORE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CATNIP, Models.GENERATED);
         itemModelGenerator.register(ModItems.CATNIP_COOKIE_FOOD, Models.GENERATED);
-
     }
 }

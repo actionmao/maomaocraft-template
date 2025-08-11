@@ -10,7 +10,7 @@ import net.minecraft.registry.RegistryWrapper;
 import java.util.concurrent.CompletableFuture;
 
 public class ModZHCNLanguageProvider extends FabricLanguageProvider {
-    protected ModZHCNLanguageProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+    public ModZHCNLanguageProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
         super(dataOutput,"zh_cn", registryLookup);
     }
 
@@ -18,6 +18,7 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
     public void generateTranslations(RegistryWrapper.WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add(ModItems.CAT_CORE, "猫猫核心");
         translationBuilder.add(ModItems.RAW_CAT_CORE, "猫猫核心粗矿");
+        translationBuilder.add(ModItems.CATNIP, "猫薄荷");
         translationBuilder.add(ModItems.CATNIP_COOKIE_FOOD, "猫薄荷饼");
 
         translationBuilder.add(ModBlocks.CAT_CORE_BLOCK, "猫猫核心块");

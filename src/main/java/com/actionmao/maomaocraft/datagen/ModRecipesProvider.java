@@ -42,6 +42,7 @@ public class ModRecipesProvider extends FabricRecipeProvider {
         //raw_mao_core与raw_mao_core_block可逆合成
         offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.MISC, ModItems.RAW_CAT_CORE,
                 RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_CAT_CORE_BLOCK);
+
         //冶炼raw_mao_core
         //ModItems中的mao_core ->生成物
         //1.熔炉
@@ -51,7 +52,11 @@ public class ModRecipesProvider extends FabricRecipeProvider {
         //3.营火
         offerFoodCookingRecipe(recipeExporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, CampfireCookingRecipe::new,
                 60, ModItems.RAW_CAT_CORE, ModItems.CAT_CORE, 0.35F);
+
+
         //有序合成
+
+        //Clay
         //合成方式:3个mud排成一排
         //clay ->生成物
         //criterion -> 解锁配方条件是:玩家拥有mud
@@ -62,6 +67,8 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                 .offerTo(recipeExporter, Identifier.of(MaoMaoCraft.MOD_ID, "mud_to_clay"));
 
         //无序合成
+
+        //Mao Core Ore
         //合成方式:1个stone和一个raw_mao_core
         //生成物:mao_core_ore(就是原矿方块)
         //criterion -> 解锁配方条件是:玩家拥有raw_mao_core或stone中的一个
@@ -72,5 +79,19 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                 .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.RAW_CAT_CORE))
                 .criterion("has_item", RecipeProvider.conditionsFromItem(Items.STONE))
                 .offerTo(recipeExporter, Identifier.of(MaoMaoCraft.MOD_ID, "mao_core_ore"));
+
+        //Catnip Cookie Food
+        //合成方式:1个wheat和1个catnip
+        //生成物:catnip_cookie_food
+        //criterion -> 解锁配方条件是:玩家拥有raw_mao_core或stone中的一个
+        //offerTo -> 确保解锁配方的json文件生成在data/maomaocraft/recipe下
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CATNIP_COOKIE_FOOD)
+                .input(ModItems.CATNIP)
+                .input(Items.WHEAT)
+                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.CATNIP))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(Items.WHEAT))
+                .offerTo(recipeExporter, Identifier.of(MaoMaoCraft.MOD_ID, "catnip_cookie_food"));
+
+
     }
 }

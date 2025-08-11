@@ -21,6 +21,7 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
     public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add(ModItems.CAT_CORE, "Cat Core");
         translationBuilder.add(ModItems.RAW_CAT_CORE, "Raw Cat Core");
+        translationBuilder.add(ModItems.CATNIP, "Catnip");
         translationBuilder.add(ModItems.CATNIP_COOKIE_FOOD, "Catnip Cookie Food");
 
         translationBuilder.add(ModBlocks.CAT_CORE_BLOCK, "Cat Core Block");

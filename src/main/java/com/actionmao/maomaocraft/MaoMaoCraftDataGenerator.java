@@ -18,6 +18,7 @@ public class MaoMaoCraftDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModLootTableProvider::new);
 		pack.addProvider(ModModelsProvider::new);
 		pack.addProvider(ModRecipesProvider::new);
+		pack.addProvider(ModZHCNLanguageProvider::new);
 
 	}
 }

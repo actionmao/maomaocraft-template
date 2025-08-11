@@ -5,9 +5,13 @@ import com.actionmao.maomaocraft.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.data.server.loottable.BlockLootTableGenerator;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
+import net.minecraft.item.Items;
 import net.minecraft.loot.LootTable;
+import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.entry.LootPoolEntry;
 import net.minecraft.loot.function.ApplyBonusLootFunction;
@@ -16,6 +20,7 @@ import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 
+import java.util.Random;
 import java.util.concurrent.CompletableFuture;
 
 //数据生成 -> 简化书写战利品列表(如:掉落物)
@@ -26,6 +31,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         super(dataOutput, registryLookup);
     }
 
+
     //成员方法
     @Override
     public void generate() {
@@ -35,6 +41,20 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         //addDrop(ModBlocks.MAO_CORE_ORE, oreDrops(ModBlocks.MAO_CORE_ORE, ModItems.RAW_MAO_CORE));
         //针对于mao_core_ore的掉落物写法
         addDrop(ModBlocks.CAT_CORE_ORE, maoCoreOreDrops(ModBlocks.CAT_CORE_ORE));
+        addDrop(Blocks.SHORT_GRASS, this::newShortPlantDrops);
+    }
+
+    public LootTable.Builder newShortPlantDrops(Block withShears) {
+        RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
+        return this.dropsWithShears(
+                withShears,
+                (LootPoolEntry.Builder<?>)this.applyExplosionDecay(
+                        withShears,
+                        ItemEntry.builder(ModItems.CATNIP)
+                                .conditionally(RandomChanceLootCondition.builder(0.125F))
+                                .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE), 2))
+                )
+        );
     }
 
     public LootTable.Builder maoCoreOreDrops(Block drop) {

@@ -11,9 +11,11 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
     //物品注册
-    public static final Item CAT_CORE = registerItems("mao_core", new Item(new Item.Settings()));
-    public static final Item RAW_CAT_CORE = registerItems("raw_mao_core", new Item(new Item.Settings()));
+    public static final Item CAT_CORE = registerItems("cat_core", new Item(new Item.Settings()));
+    public static final Item RAW_CAT_CORE = registerItems("raw_cat_core", new Item(new Item.Settings()));
     public static final Item CATNIP_COOKIE_FOOD = registerItems("catnip_cookie_food", new Item(new Item.Settings().food(ModFoodComponents.CATNIP_COOKIE_FOOD)));
+    public static final Item CATNIP = registerItems("catnip", new Item(new Item.Settings()));
+
 
 
     //普通物品注册

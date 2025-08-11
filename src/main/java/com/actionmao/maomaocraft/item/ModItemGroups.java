@@ -34,6 +34,7 @@ public class ModItemGroups {
                             //mao_group中会展示的物品
                             entries.add(ModItems.CAT_CORE);
                             entries.add(ModItems.RAW_CAT_CORE);
+                            entries.add(ModItems.CATNIP);
                             entries.add(ModItems.CATNIP_COOKIE_FOOD);
                             entries.add(ModBlocks.CAT_CORE_BLOCK);
                             entries.add(ModBlocks.RAW_CAT_CORE_BLOCK);
