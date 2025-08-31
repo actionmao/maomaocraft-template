@@ -14,7 +14,8 @@ import net.minecraft.util.Identifier;
 public class ModItemGroups {
 
     //物品栏组的属性值
-    public static final RegistryKey<ItemGroup> CAT_GROUP = register("mao_group");
+    public static final RegistryKey<ItemGroup> CAT_GROUP = register("cat_group");
+    public static final RegistryKey<ItemGroup> CAT_GROUP_FOR_FOOD = register("cat_group_for_food");
 
 
     //要想注册一个新的物品栏,请使用该方法
@@ -28,7 +29,7 @@ public class ModItemGroups {
                 Registries.ITEM_GROUP,
                 CAT_GROUP,
                 ItemGroup.create(ItemGroup.Row.TOP, -1)
-                        .displayName(Text.translatable("itemGroup.mao_group"))
+                        .displayName(Text.translatable("itemGroup.cat_group"))
                         .icon(() -> new ItemStack(ModItems.CAT_CORE))
                         .entries((displayContext, entries) -> {
                             //mao_group中会展示的物品
@@ -39,6 +40,27 @@ public class ModItemGroups {
                             entries.add(ModBlocks.CAT_CORE_BLOCK);
                             entries.add(ModBlocks.RAW_CAT_CORE_BLOCK);
                             entries.add(ModBlocks.CAT_CORE_ORE);
+                        })
+                        .build()
+        );
+
+        Registry.register(
+                Registries.ITEM_GROUP,
+                CAT_GROUP_FOR_FOOD,
+                ItemGroup.create(ItemGroup.Row.TOP, -1)
+                        .displayName(Text.translatable("itemGroup.cat_group_for_food"))
+                        .icon(() -> new ItemStack(ModItems.CATNIP_COOKIE_FOOD))
+                        .entries((displayContext, entries) -> {
+                            //mao_group中会展示的物品
+                            entries.add(ModItems.CATNIP);
+                            entries.add(ModItems.CATNIP_COOKIE_FOOD);
+                            entries.add(ModItems.CATNIP_COOKIE_FOOD_WITH_FEATHER);
+                            entries.add(ModItems.CATNIP_COOKIE_FOOD_WITH_WOODEN_PICKAXE);
+                            entries.add(ModItems.CATNIP_COOKIE_FOOD_WITH_WOODEN_SWORD);
+                            entries.add(ModItems.CATNIP_COOKIE_FOOD_WITH_WOODEN_SHOVEL);
+                            entries.add(ModItems.CATNIP_COOKIE_FOOD_WITH_WIND_CHARGE);
+                            entries.add(ModItems.CATNIP_COOKIE_FOOD_WITH_LAVA_BUCKET);
+                            entries.add(ModItems.CATNIP_COOKIE_FOOD_WITH_TNT);
                         })
                         .build()
         );

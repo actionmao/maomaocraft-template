@@ -78,7 +78,7 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                 .input(Items.STONE)
                 .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.RAW_CAT_CORE))
                 .criterion("has_item", RecipeProvider.conditionsFromItem(Items.STONE))
-                .offerTo(recipeExporter, Identifier.of(MaoMaoCraft.MOD_ID, "mao_core_ore"));
+                .offerTo(recipeExporter, Identifier.of(MaoMaoCraft.MOD_ID, "cat_core_ore"));
 
         //Catnip Cookie Food
         //合成方式:1个wheat和1个catnip
@@ -91,6 +91,77 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                 .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.CATNIP))
                 .criterion("has_item", RecipeProvider.conditionsFromItem(Items.WHEAT))
                 .offerTo(recipeExporter, Identifier.of(MaoMaoCraft.MOD_ID, "catnip_cookie_food"));
+
+        //Catnip Cookie Food With Feather
+        //catnip,wheat,wooden pickaxe,cat core
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CATNIP_COOKIE_FOOD_WITH_FEATHER)
+                .input(ModItems.CATNIP).input(Items.WHEAT).input(Items.FEATHER).input(ModItems.CAT_CORE)
+                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.CATNIP))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(Items.WHEAT))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(Items.FEATHER))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.CAT_CORE))
+                .offerTo(recipeExporter, Identifier.of(MaoMaoCraft.MOD_ID, "catnip_cookie_food_with_feather"));
+
+        //Catnip Cookie Food With Wooden Pickaxe
+        //catnip,wheat,wooden pickaxe,cat core
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CATNIP_COOKIE_FOOD_WITH_WOODEN_PICKAXE)
+                .input(ModItems.CATNIP).input(Items.WHEAT).input(Items.WOODEN_PICKAXE).input(ModItems.CAT_CORE)
+                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.CATNIP))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(Items.WHEAT))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(Items.WOODEN_PICKAXE))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.CAT_CORE))
+                .offerTo(recipeExporter, Identifier.of(MaoMaoCraft.MOD_ID, "catnip_cookie_food_with_wooden_pickaxe"));
+
+
+        //Catnip Cookie Food With Wooden Sword
+        //catnip,wheat,wooden sword,cat core
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CATNIP_COOKIE_FOOD_WITH_WOODEN_SWORD)
+                .input(ModItems.CATNIP).input(Items.WHEAT).input(Items.WOODEN_SWORD).input(ModItems.CAT_CORE)
+                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.CATNIP))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(Items.WHEAT))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(Items.WOODEN_SWORD))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.CAT_CORE))
+                .offerTo(recipeExporter, Identifier.of(MaoMaoCraft.MOD_ID, "catnip_cookie_food_with_wooden_sword"));
+
+        //Catnip Cookie Food With Wooden Shovel
+        //catnip,wheat,wooden shovel,cat core
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CATNIP_COOKIE_FOOD_WITH_WOODEN_SHOVEL)
+                .input(ModItems.CATNIP).input(Items.WHEAT).input(Items.WOODEN_SHOVEL).input(ModItems.CAT_CORE)
+                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.CATNIP))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(Items.WHEAT))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(Items.WOODEN_SHOVEL))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.CAT_CORE))
+                .offerTo(recipeExporter, Identifier.of(MaoMaoCraft.MOD_ID, "catnip_cookie_food_with_wooden_shovel"));
+
+        //Catnip Cookie Food With Wind Charge
+        //catnip,wheat,wind charge,cat core
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CATNIP_COOKIE_FOOD_WITH_WIND_CHARGE)
+                .input(ModItems.CATNIP).input(Items.WHEAT).input(Items.WIND_CHARGE).input(ModItems.CAT_CORE)
+                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.CATNIP))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(Items.WHEAT))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(Items.WIND_CHARGE))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.CAT_CORE))
+                .offerTo(recipeExporter, Identifier.of(MaoMaoCraft.MOD_ID, "catnip_cookie_food_with_wind_charge"));
+
+        //Catnip Cookie Food With Lava Bucket
+        //catnip,wheat,lava bucket,cat core
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CATNIP_COOKIE_FOOD_WITH_LAVA_BUCKET)
+                .input(ModItems.CATNIP).input(Items.WHEAT).input(Items.LAVA_BUCKET).input(ModItems.CAT_CORE)
+                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.CATNIP))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(Items.WHEAT))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(Items.LAVA_BUCKET))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.CAT_CORE))
+                .offerTo(recipeExporter, Identifier.of(MaoMaoCraft.MOD_ID, "catnip_cookie_food_with_lava_bucket"));
+
+        //Catnip Cookie Food With TNT
+        //catnip,wheat,tnt,cat core
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CATNIP_COOKIE_FOOD_WITH_TNT)
+                .input(ModItems.CATNIP).input(Items.WHEAT).input(Items.TNT).input(ModItems.CAT_CORE)
+                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.CATNIP))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(Items.WHEAT))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(Items.TNT))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.CAT_CORE))
+                .offerTo(recipeExporter, Identifier.of(MaoMaoCraft.MOD_ID, "catnip_cookie_food_with_tnt"));
 
 
     }

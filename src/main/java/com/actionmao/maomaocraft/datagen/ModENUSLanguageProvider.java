@@ -23,10 +23,18 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.RAW_CAT_CORE, "Raw Cat Core");
         translationBuilder.add(ModItems.CATNIP, "Catnip");
         translationBuilder.add(ModItems.CATNIP_COOKIE_FOOD, "Catnip Cookie Food");
+        translationBuilder.add(ModItems.CATNIP_COOKIE_FOOD_WITH_FEATHER, "Catnip Cookie Food With Feather");
+        translationBuilder.add(ModItems.CATNIP_COOKIE_FOOD_WITH_WOODEN_PICKAXE, "Catnip Cookie Food With Wooden Pickaxe");
+        translationBuilder.add(ModItems.CATNIP_COOKIE_FOOD_WITH_WOODEN_SWORD, "Catnip Cookie Food With Wooden Sword");
+        translationBuilder.add(ModItems.CATNIP_COOKIE_FOOD_WITH_WOODEN_SHOVEL, "Catnip Cookie Food With Wooden Shovel");
+        translationBuilder.add(ModItems.CATNIP_COOKIE_FOOD_WITH_WIND_CHARGE, "Catnip Cookie Food With Wind Charge");
+        translationBuilder.add(ModItems.CATNIP_COOKIE_FOOD_WITH_LAVA_BUCKET, "Catnip Cookie Food With Lava Bucket");
+        translationBuilder.add(ModItems.CATNIP_COOKIE_FOOD_WITH_TNT, "Catnip Cookie Food With TNT");
 
         translationBuilder.add(ModBlocks.CAT_CORE_BLOCK, "Cat Core Block");
         translationBuilder.add(ModBlocks.RAW_CAT_CORE_BLOCK, "Raw Cat Core Block");
         translationBuilder.add(ModBlocks.CAT_CORE_ORE, "Cat Core Ore");
         translationBuilder.add(ModItemGroups.CAT_GROUP, "Cat Group");
+        translationBuilder.add(ModItemGroups.CAT_GROUP_FOR_FOOD, "Cat Group For Food");
     }
 }

@@ -14,7 +14,16 @@ public class ModItems {
     public static final Item CAT_CORE = registerItems("cat_core", new Item(new Item.Settings()));
     public static final Item RAW_CAT_CORE = registerItems("raw_cat_core", new Item(new Item.Settings()));
     public static final Item CATNIP_COOKIE_FOOD = registerItems("catnip_cookie_food", new Item(new Item.Settings().food(ModFoodComponents.CATNIP_COOKIE_FOOD)));
+    public static final Item CATNIP_COOKIE_FOOD_WITH_FEATHER = registerItems("catnip_cookie_food_with_feather", new Item(new Item.Settings().food(ModFoodComponents.CATNIP_COOKIE_FOOD_WITH_FEATHER)));
+    public static final Item CATNIP_COOKIE_FOOD_WITH_WOODEN_PICKAXE = registerItems("catnip_cookie_food_with_wooden_pickaxe", new Item(new Item.Settings().food(ModFoodComponents.CATNIP_COOKIE_FOOD_WITH_WOODEN_PICKAXE)));
+    public static final Item CATNIP_COOKIE_FOOD_WITH_WOODEN_SWORD = registerItems("catnip_cookie_food_with_wooden_sword", new Item(new Item.Settings().food(ModFoodComponents.CATNIP_COOKIE_FOOD_WITH_WOODEN_SWORD)));
+    public static final Item CATNIP_COOKIE_FOOD_WITH_WOODEN_SHOVEL = registerItems("catnip_cookie_food_with_wooden_shovel", new Item(new Item.Settings().food(ModFoodComponents.CATNIP_COOKIE_FOOD_WITH_WOODEN_SHOVEL)));
+    public static final Item CATNIP_COOKIE_FOOD_WITH_WIND_CHARGE = registerItems("catnip_cookie_food_with_wind_charge", new Item(new Item.Settings().food(ModFoodComponents.CATNIP_COOKIE_FOOD_WITH_WIND_CHARGE)));
+    public static final Item CATNIP_COOKIE_FOOD_WITH_LAVA_BUCKET = registerItems("catnip_cookie_food_with_lava_bucket", new Item(new Item.Settings().food(ModFoodComponents.CATNIP_COOKIE_FOOD_WITH_LAVA_BUCKET)));
+    public static final Item CATNIP_COOKIE_FOOD_WITH_TNT = registerItems("catnip_cookie_food_with_tnt", new CatnipCookieFoodWithTnt(new Item.Settings().food(ModFoodComponents.CATNIP_COOKIE_FOOD_WITH_TNT)));
     public static final Item CATNIP = registerItems("catnip", new Item(new Item.Settings()));
+
+
 
 
 
