@@ -4,6 +4,8 @@ import com.actionmao.maomaocraft.block.ModBlocks;
 import com.actionmao.maomaocraft.item.ModItemGroups;
 import com.actionmao.maomaocraft.item.ModItems;
 import com.actionmao.maomaocraft.mixin.GrassColorsMixin;
+import com.actionmao.maomaocraft.tags.ModBlockTags;
+import com.actionmao.maomaocraft.tags.ModItemTags;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.util.Identifier;
@@ -24,11 +26,18 @@ public class MaoMaoCraft implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		//加载ModItems类,用于注册物品
+		//注册加载
 		ModItems.registerModItems();
 		ModItemGroups.registerModItemGroups();
 		ModBlocks.registerModBlocks();
+		ModBlockTags.registerModBlockTags();
+		ModItemTags.registerModItemTags();
 
+		//调用GrassColorsMixin中的getter/setter
+		int[] colorMap = GrassColorsMixin.getColorMap();
+		LOGGER.info("Grass Color Map length: {}", colorMap.length);
+		GrassColorsMixin.setColorMap(new int[128]);
+		LOGGER.info("New Grass Color Map length: {}", GrassColorsMixin.getColorMap().length);
 
 
 		LOGGER.info("Hello Fabric world!");

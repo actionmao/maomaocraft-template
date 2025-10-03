@@ -27,6 +27,8 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.CATNIP_COOKIE_FOOD_WITH_WIND_CHARGE, "风弹味猫薄荷饼干");
         translationBuilder.add(ModItems.CATNIP_COOKIE_FOOD_WITH_LAVA_BUCKET, "岩浆桶味猫薄荷饼干");
         translationBuilder.add(ModItems.CATNIP_COOKIE_FOOD_WITH_TNT, "TNT味猫薄荷饼干");
+        translationBuilder.add(ModItems.MINER, "采矿器");
+        translationBuilder.add(ModItems.INTERLOCK_MINER, "连锁采矿器");
 
         translationBuilder.add(ModBlocks.CAT_CORE_BLOCK, "猫猫核心块");
         translationBuilder.add(ModBlocks.RAW_CAT_CORE_BLOCK, "猫猫核心粗矿块");
@@ -34,5 +36,7 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItemGroups.CAT_GROUP, "猫猫物品组");
         translationBuilder.add(ModItemGroups.CAT_GROUP_FOR_FOOD, "猫猫食品组");
 
+        translationBuilder.add("item.maomaocraft.miner.shift_tooltip", "\u00A7a隔空采集矿物\u00A7r");
+        translationBuilder.add("item.maomaocraft.miner.tooltip", "按下\u00A7a[SHIFT]\u00A7r查看更多信息");
     }
 }

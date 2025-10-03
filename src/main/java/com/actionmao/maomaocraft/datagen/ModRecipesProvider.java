@@ -23,9 +23,9 @@ import java.util.concurrent.CompletableFuture;
 
 //数据生成 -> 简化所有与原版合成有关(如:工作台,熔炉,高炉)操作
 public class ModRecipesProvider extends FabricRecipeProvider {
-    //放入炉内的物品就是list集合中的每一个参数, 预期的生成物叫做mao_core
+    //放入炉内的物品就是list集合中的每一个参数, 预期的生成物叫做cat_core
     //list集合中的元素就在list.of()的括号中
-    public static final List<ItemConvertible> MAO_CORE = List.of(ModItems.RAW_CAT_CORE, ModBlocks.CAT_CORE_ORE);
+    public static final List<ItemConvertible> CAT_CORE = List.of(ModItems.RAW_CAT_CORE, ModBlocks.CAT_CORE_ORE);
 
     //构造方法
     public ModRecipesProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
@@ -46,15 +46,33 @@ public class ModRecipesProvider extends FabricRecipeProvider {
         //冶炼raw_mao_core
         //ModItems中的mao_core ->生成物
         //1.熔炉
-        offerSmelting(recipeExporter, MAO_CORE, RecipeCategory.MISC, ModItems.CAT_CORE, 0.5F, 20, "mao_core");
+        offerSmelting(recipeExporter, CAT_CORE, RecipeCategory.MISC, ModItems.CAT_CORE, 0.5F, 20, "mao_core");
         //2.高炉
-        offerBlasting(recipeExporter, MAO_CORE, RecipeCategory.MISC, ModItems.CAT_CORE, 0.5F, 10, "mao_core");
+        offerBlasting(recipeExporter, CAT_CORE, RecipeCategory.MISC, ModItems.CAT_CORE, 0.5F, 10, "mao_core");
         //3.营火
         offerFoodCookingRecipe(recipeExporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, CampfireCookingRecipe::new,
                 60, ModItems.RAW_CAT_CORE, ModItems.CAT_CORE, 0.35F);
 
 
         //有序合成
+        //Miner
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MINER, 1)
+                .pattern("###")
+                .pattern("#*#")
+                .pattern("###")
+                .input('#', Ingredient.ofItems(Items.IRON_BLOCK))
+                .input('*', Ingredient.ofItems(Items.NETHERITE_INGOT))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(Items.NETHERITE_INGOT))
+                .offerTo(recipeExporter, Identifier.of(MaoMaoCraft.MOD_ID, "miner"));
+        //Interlock Miner
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.INTERLOCK_MINER, 1)
+                .pattern("###")
+                .pattern("#*#")
+                .pattern("###")
+                .input('*', Ingredient.ofItems(ModItems.MINER))
+                .input('#', Ingredient.ofItems(Items.END_CRYSTAL))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(Items.NETHERITE_INGOT))
+                .offerTo(recipeExporter, Identifier.of(MaoMaoCraft.MOD_ID, "interlock_miner"));
 
         //Clay
         //合成方式:3个mud排成一排

@@ -3,6 +3,8 @@
   "package": "com.actionmao.maomaocraft.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "AbstractFurnaceBlockEntityMixin",
+    "EndermanEntityMixin",
     "ExampleMixin",
     "GrassColorsMixin"
   ],

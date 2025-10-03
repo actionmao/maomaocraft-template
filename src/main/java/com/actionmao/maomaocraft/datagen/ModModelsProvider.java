@@ -40,5 +40,7 @@ public class ModModelsProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CATNIP_COOKIE_FOOD_WITH_WIND_CHARGE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CATNIP_COOKIE_FOOD_WITH_LAVA_BUCKET, Models.GENERATED);
         itemModelGenerator.register(ModItems.CATNIP_COOKIE_FOOD_WITH_TNT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MINER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.INTERLOCK_MINER, Models.GENERATED);
     }
 }

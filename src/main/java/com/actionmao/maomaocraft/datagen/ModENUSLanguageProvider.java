@@ -30,11 +30,16 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.CATNIP_COOKIE_FOOD_WITH_WIND_CHARGE, "Catnip Cookie Food With Wind Charge");
         translationBuilder.add(ModItems.CATNIP_COOKIE_FOOD_WITH_LAVA_BUCKET, "Catnip Cookie Food With Lava Bucket");
         translationBuilder.add(ModItems.CATNIP_COOKIE_FOOD_WITH_TNT, "Catnip Cookie Food With TNT");
+        translationBuilder.add(ModItems.MINER, "Miner");
+        translationBuilder.add(ModItems.INTERLOCK_MINER, "Interlock Miner");
 
         translationBuilder.add(ModBlocks.CAT_CORE_BLOCK, "Cat Core Block");
         translationBuilder.add(ModBlocks.RAW_CAT_CORE_BLOCK, "Raw Cat Core Block");
         translationBuilder.add(ModBlocks.CAT_CORE_ORE, "Cat Core Ore");
         translationBuilder.add(ModItemGroups.CAT_GROUP, "Cat Group");
         translationBuilder.add(ModItemGroups.CAT_GROUP_FOR_FOOD, "Cat Group For Food");
+
+        translationBuilder.add("item.maomaocraft.miner.shift_tooltip", "\u00A7aA tool used to mine ores without touching the ore.\u00A7r");
+        translationBuilder.add("item.maomaocraft.miner.tooltip", "Hold \u00A7a[SHIFT]\u00A7r for more information.");
     }
 }

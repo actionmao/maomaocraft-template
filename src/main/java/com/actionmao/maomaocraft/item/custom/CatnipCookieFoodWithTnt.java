@@ -1,4 +1,4 @@
-package com.actionmao.maomaocraft.item;
+package com.actionmao.maomaocraft.item.custom;
 
 
 import net.minecraft.entity.LivingEntity;

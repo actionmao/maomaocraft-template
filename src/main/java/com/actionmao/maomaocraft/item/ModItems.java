@@ -1,6 +1,8 @@
 package com.actionmao.maomaocraft.item;
 
 import com.actionmao.maomaocraft.MaoMaoCraft;
+import com.actionmao.maomaocraft.item.custom.CatnipCookieFoodWithTnt;
+import com.actionmao.maomaocraft.item.custom.Miner;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
@@ -22,6 +24,8 @@ public class ModItems {
     public static final Item CATNIP_COOKIE_FOOD_WITH_LAVA_BUCKET = registerItems("catnip_cookie_food_with_lava_bucket", new Item(new Item.Settings().food(ModFoodComponents.CATNIP_COOKIE_FOOD_WITH_LAVA_BUCKET)));
     public static final Item CATNIP_COOKIE_FOOD_WITH_TNT = registerItems("catnip_cookie_food_with_tnt", new CatnipCookieFoodWithTnt(new Item.Settings().food(ModFoodComponents.CATNIP_COOKIE_FOOD_WITH_TNT)));
     public static final Item CATNIP = registerItems("catnip", new Item(new Item.Settings()));
+    public static final Item MINER = registerItems("miner", new Miner(new Item.Settings().maxDamage(127), false, 1, 64));
+    public static final Item INTERLOCK_MINER = registerItems("interlock_miner", new Miner(new Item.Settings().maxDamage(2047), true, 1, 128));
 
 
 

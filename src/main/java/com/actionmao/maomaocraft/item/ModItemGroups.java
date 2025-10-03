@@ -37,9 +37,12 @@ public class ModItemGroups {
                             entries.add(ModItems.RAW_CAT_CORE);
                             entries.add(ModItems.CATNIP);
                             entries.add(ModItems.CATNIP_COOKIE_FOOD);
+                            entries.add(ModItems.MINER);
+                            entries.add(ModItems.INTERLOCK_MINER);
                             entries.add(ModBlocks.CAT_CORE_BLOCK);
                             entries.add(ModBlocks.RAW_CAT_CORE_BLOCK);
                             entries.add(ModBlocks.CAT_CORE_ORE);
+
                         })
                         .build()
         );
@@ -51,7 +54,7 @@ public class ModItemGroups {
                         .displayName(Text.translatable("itemGroup.cat_group_for_food"))
                         .icon(() -> new ItemStack(ModItems.CATNIP_COOKIE_FOOD))
                         .entries((displayContext, entries) -> {
-                            //mao_group中会展示的物品
+                            //cat_group_for_food中会展示的物品
                             entries.add(ModItems.CATNIP);
                             entries.add(ModItems.CATNIP_COOKIE_FOOD);
                             entries.add(ModItems.CATNIP_COOKIE_FOOD_WITH_FEATHER);
