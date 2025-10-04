@@ -103,7 +103,7 @@ public class Miner extends Item {
                                 newList.addAll(prospect);
                             }
                         } else {
-                            break;
+                            return newList;
                         }
 
 
