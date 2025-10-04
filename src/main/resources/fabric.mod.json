@@ -11,7 +11,7 @@
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/actionmao/maomaocraft-template-1.21"
 	},
-	"license": "CC0-1.0",
+	"license": "BSD-3-Clause",
 	"icon": "assets/maomaocraft/icon.png",
 	"environment": "*",
 	"entrypoints": {
